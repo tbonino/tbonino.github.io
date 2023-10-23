@@ -1,135 +1,242 @@
-/*try to dynamically account for width in the query*/
 @media screen {
-  /*body styling rules, try to impose a structure on all body stylings*/
   body {
-    background-image: url(/Media/img/layered-waves-haikei.png);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    --heading-color: gold;
+    --font-color: whitesmoke;
+  }
+
+  h1 {
+    color: var(--heading-color);
+  }
+
+  h2 {
+    color: var(--heading-color);
+  }
+
+  h3 {
+    color: var(--heading-color);
+  }
+
+  p {
+    color: var(--font-color);
+  }
+
+  button {
+    color: black;
+    border-style: none;
+    background-color: var(--heading-color);
+  }
+
+  .landingSection {
+    display: grid;
+    justify-content: center;
+    background-image: url(../images/ladingBackground.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    --font-color: white;
-    --link-color: #001220;
-    --other-color: #dec2b6;
+    text-align: center;
+    padding: 2vw;
+  }
+
+  .landingSection img {
+    width: 12%;
+    height: 12%;
+  }
+
+  .landingHeading1 {
+    font-size: 8vw;
+  }
+
+  .landingSection figcaption {
     color: var(--font-color);
+    font-size: xx-small;
   }
 
-  * {
-    margin: 10px;
-    padding: 2px;
-    box-sizing: border-box;
+  .landingHeading2 {
+    font-size: xx-large;
   }
 
-  /*get rid of hyperlink styling of anchors*/
-  a {
-    text-decoration: none;
+  .introSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    background-image: url(../images/introSectionBackground.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5vw;
   }
 
-  /*help horizontal rule standout from background.*/
-  hr {
-    background-color: var(--other-color);
+  .introHeading {
+    font-size: 3vw;
   }
 
-  /*navbar links will be different colors from all others*/
-  footer a {
-    color: var(--font-color);
-  }
-
-  /*Links after introduction on landing page get their own color*/
-  .landingPage a {
-    color: #fa7268;
-  }
-
-  /*Introductory sentence explaining the gist of the website*/
   .introText {
-    color: #fa7268;
-    font-size: x-large;
-  }
-
-  /*help logo stay a reasonable size depending on device*/
-  .logo img {
-    width: 10%;
-    height: 10%;
-    float: left;
-  }
-
-  /*Give the quote some styling to help it stand out*/
-  .quote {
-    float: right;
-    font-style: italic;
-    font-family: Brush Script MT, Brush Script Std, cursive;
+    position: relative;
+    left: 3vw;
     font-size: larger;
-    color: var(--other-color);
   }
 
-  .profileImg img {
-    width: 25%;
-    height: 25%;
-    float: right;
-  }
-
-  .navbar {
-    display: flex;
+  .imgCapSection {
+    display: grid;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    background-color: #fa7268;
-    float: right;
+    background-image: url(../images/imagCapSectionBackground.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding: 5vw;
   }
 
-  .navbar a {
-    color: var(--link-color);
-  }
-
-  /*introduce dynamic reposnse to links*/
-  .navbar a:hover {
-    background-color: var(--other-color);
-    border-radius: 5px;
-    transition: 0.3s ease;
-  }
-
-  .familyDesc {
+  .imgCapImages {
+    position: relative;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
 
-  .familyDesc img {
-    width: 75%;
-    height: 75%;
+  .imgCapImages img {
+    max-width: 25vw;
+    max-height: 25vw;
   }
 
-  .funPhoto img {
-    width: 35%;
-    height: 35%;
-  }
-
-  .tvShow {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .tvShow img {
-    width: 75%;
-    height: 75%;
-  }
-  footer a:hover {
-    background-color: var(--other-color);
-    border-radius: 5px;
-    transition: 0.3s ease;
-  }
-
-  .landingPage a:hover {
-    background-color: var(--other-color);
-    border-radius: 5px;
-    transition: 0.3s ease;
-  }
-
-  .funFactsPage a {
-    color: var(--other-color);
-  }
-
-  .funFactsPage a:hover {
+  .imgCapImages figcaption {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
     color: var(--font-color);
-    background-color: var(--other-color);
+  }
+
+  .activitySection {
+    display: flex;
+    justify-content: space-between;
+    align-items: first baseline;
+    background-image: url(../images/acivitySectionBackground.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5vw;
+  }
+
+  .activitySectionHeading {
+    font-size: 2vw;
+  }
+
+  .activitySectionBody {
+    font-size: large;
+    left: 5vw;
+  }
+
+  .metricsSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(../images/metricsBackground.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5vw;
+  }
+
+  .metricsSection div {
+    background-color: black;
+    border-radius: 50%;
+    text-align: center;
+  }
+
+  .metricsSection h3 {
+    font-size: 3vw;
+  }
+
+  .metricsSection p {
+    font-size: x-small;
+  }
+
+  .testimonialSection {
+    display: grid;
+    justify-content: center;
+    background-image: url(../images/testimonialSectionBackground.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding: 3vw;
+  }
+
+  .testimonialSection img {
+    background-color: black;
+    border-radius: 50%;
+    max-width: 25vw;
+    max-height: 25vw;
+  }
+
+  .addImgSection {
+    display: flexbox;
+    font-size: 0;
+  }
+
+  .addImgSection img {
+    float: left;
+    margin: 0 auto
+  }
+
+  .addImg1 img {
+    width: 23vw;
+    height: 50vw;
+  }
+
+  .addImg2 img {
+    width: 23vw;
+    height: 50vw;
+  }
+
+  .addImg3 img {
+    width: 23vw;
+    height: 50vw;
+  }
+
+  .addImg4 img {
+    width: 23vw;
+    height: 50vw;
+  }
+
+  .contactSection {
+    background-image: url(../images/contactUsBackground.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5vw;
+  }
+
+  .contactDetails h2 {
+    font-size: 4vw;
+  }
+
+  .socials i {
+    color: var(--heading-color);
+  }
+
+  .contactForm {
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .contactForm form {
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .contactForm input[type="text"] {
+    border: 2px solid whitesmoke;
+    border-radius: 2px;
+  }
+
+  .contactForm textarea {
+    border: 2px solid whitesmoke;
+    border-radius: 2px;
   }
 }
