@@ -1,242 +1,78 @@
+body {
+  --header-font-color: rgb(128, 162, 137);
+  --background-color-1: rgb(204, 153, 0);
+  --background-color-2: rgb(229, 223, 218);
+}
+
+header {
+  display: inline-flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 1rem;
+  text-align: center;
+}
+
+h1 {
+  color: var(--header-font-color);
+  background-color: var(--background-color-2);
+  /*contain background color around text only*/
+  display: inline;
+  padding: 1rem;
+  border-radius: 5px;
+}
+.search-btn {
+  background-color: var(--background-color-1);
+  color: var(--background-color-2);
+}
+
+.search-inputs {
+  display: inline-flex;
+  justify-content: space-between 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 1rem;
+  background-color: var(--background-color-2);
+  text-align: right;
+}
+
+.search-inputs h2 {
+  text-align: center;
+  color: var(--header-font-color);
+}
+
+.search-element {
+  margin: 1rem;
+}
+
+.outer-card-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*style results list*/
+.vehicle-card {
+  /*keeps background color around text*/
+  display: table;
+  background-color: var(--background-color-2);
+  padding: 1rem;
+  margin: 1rem;
+  text-align: left;
+}
+
+.vehicle-card h3 {
+  color: var(--header-font-color);
+}
+
+/*Background covers device's screen and doesn't scroll*/
 @media screen {
   body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    --heading-color: gold;
-    --font-color: whitesmoke;
-  }
-
-  h1 {
-    color: var(--heading-color);
-  }
-
-  h2 {
-    color: var(--heading-color);
-  }
-
-  h3 {
-    color: var(--heading-color);
-  }
-
-  p {
-    color: var(--font-color);
-  }
-
-  button {
-    color: black;
-    border-style: none;
-    background-color: var(--heading-color);
-  }
-
-  .landingSection {
-    display: grid;
-    justify-content: center;
-    background-image: url(../images/ladingBackground.webp);
+    background-image: url(../images/car_background.jpeg);
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
     text-align: center;
-    padding: 2vw;
-  }
-
-  .landingSection img {
-    width: 12%;
-    height: 12%;
-  }
-
-  .landingHeading1 {
-    font-size: 8vw;
-  }
-
-  .landingSection figcaption {
-    color: var(--font-color);
-    font-size: xx-small;
-  }
-
-  .landingHeading2 {
-    font-size: xx-large;
-  }
-
-  .introSection {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    background-image: url(../images/introSectionBackground.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 5vw;
-  }
-
-  .introHeading {
-    font-size: 3vw;
-  }
-
-  .introText {
-    position: relative;
-    left: 3vw;
-    font-size: larger;
-  }
-
-  .imgCapSection {
-    display: grid;
-    justify-content: space-between;
-    align-items: center;
-    background-image: url(../images/imagCapSectionBackground.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    text-align: center;
-    padding: 5vw;
-  }
-
-  .imgCapImages {
-    position: relative;
-    display: flex;
-  }
-
-  .imgCapImages img {
-    max-width: 25vw;
-    max-height: 25vw;
-  }
-
-  .imgCapImages figcaption {
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-    color: var(--font-color);
-  }
-
-  .activitySection {
-    display: flex;
-    justify-content: space-between;
-    align-items: first baseline;
-    background-image: url(../images/acivitySectionBackground.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 5vw;
-  }
-
-  .activitySectionHeading {
-    font-size: 2vw;
-  }
-
-  .activitySectionBody {
-    font-size: large;
-    left: 5vw;
-  }
-
-  .metricsSection {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-image: url(../images/metricsBackground.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 5vw;
-  }
-
-  .metricsSection div {
-    background-color: black;
-    border-radius: 50%;
-    text-align: center;
-  }
-
-  .metricsSection h3 {
-    font-size: 3vw;
-  }
-
-  .metricsSection p {
-    font-size: x-small;
-  }
-
-  .testimonialSection {
-    display: grid;
-    justify-content: center;
-    background-image: url(../images/testimonialSectionBackground.webp);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-align: center;
-    padding: 3vw;
-  }
-
-  .testimonialSection img {
-    background-color: black;
-    border-radius: 50%;
-    max-width: 25vw;
-    max-height: 25vw;
-  }
-
-  .addImgSection {
-    display: flexbox;
-    font-size: 0;
-  }
-
-  .addImgSection img {
-    float: left;
-    margin: 0 auto
-  }
-
-  .addImg1 img {
-    width: 23vw;
-    height: 50vw;
-  }
-
-  .addImg2 img {
-    width: 23vw;
-    height: 50vw;
-  }
-
-  .addImg3 img {
-    width: 23vw;
-    height: 50vw;
-  }
-
-  .addImg4 img {
-    width: 23vw;
-    height: 50vw;
-  }
-
-  .contactSection {
-    background-image: url(../images/contactUsBackground.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5vw;
-  }
-
-  .contactDetails h2 {
-    font-size: 4vw;
-  }
-
-  .socials i {
-    color: var(--heading-color);
-  }
-
-  .contactForm {
-    display: grid;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .contactForm form {
-    display: grid;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .contactForm input[type="text"] {
-    border: 2px solid whitesmoke;
-    border-radius: 2px;
-  }
-
-  .contactForm textarea {
-    border: 2px solid whitesmoke;
-    border-radius: 2px;
   }
 }
