@@ -3,98 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tim'$ Discount Price$! - Used Car Price$</title>
-    <!--Link to favicon-->
-    <link rel="shortcut icon" href="./images/favicon.PNG" type="image" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <script src="./js/app.js" defer></script>
+    <title>Quotes Generator</title>
+    <script src="js/app.js" defer></script>
+    <script src="js/ProgAssign5.js" defer></script>
   </head>
   <body>
-    <header>
-      <figure>
-        <img
-          src="./images/Logo.PNG"
-          alt="Tim$ Discount Price$ logo"
-          class="logo"
-        />
-      </figure>
-      <h1>Check Out These Small Price$ on Used Cars!</h1>
-    </header>
-    <div class="search-inputs">
-      <form action="" class="form-elements">
-        <h2>Search Cars</h2>
-        <div class="search-element">
-          <label for="cmake">Car Make</label>
-          <input type="text" id="c-make" name="c-make" />
-          <button type="button" class="search-btn" id="search-btn-c-make">
-            Search Car Make
-          </button>
-        </div>
-        <div class="search-element">
-          <label for="year">Minimum Year</label>
-          <input
-            type="text"
-            id="min-year"
-            name="min-year"
-            default="1900"
-            placeholder="1900"
-          />
-          <label for="year">Maximum Year</label>
-          <input
-            type="text"
-            id="max-year"
-            name="max-year"
-            default="3000"
-            placeholder="3000"
-          />
-          <button type="button" class="search-btn" id="search-btn-year">
-            Search Years
-          </button>
-        </div>
-        <div class="search-element">
-          <label for="milage">Input Maximum Mileage</label>
-          <input
-            type="text"
-            id="mileage"
-            name="mileage"
-            default="0"
-            placeholder="0"
-          />
-          <button type="button" class="search-btn" id="search-btn-mileage">
-            Search Mileage
-          </button>
-        </div>
-        <div class="search-element">
-          <label for="min-price">Minimum Price</label>
-          <input
-            type="text"
-            id="min-price"
-            name="min-price"
-            default="0"
-            placeholder="0"
-          />
-          <label for="max-price">Maximum Price</label>
-          <input
-            type="text"
-            id="max-price"
-            name="max-price"
-            default="999999"
-            placeholder="999999"
-          />
-          <button type="button" class="search-btn" id="search-btn-price">
-            Search Price
-          </button>
-        </div>
-        <div class="search-element">
-          <button type="button" class="search-btn" id="reset-btn">Reset</button>
-        </div>
-      </form>
-    </div>
-
-    <!--adding an outer wrapper to help style the product cards-->
-    <div class="outer-card-wrapper">
-      <!--product cards will go here, update based on user inputs-->
-      <div id="product-cards"></div>
-    </div>
+    <h1>Click below to get a famous quote!</h1>
+    <button class="quote-btn">Click for a Quote.</button>
   </body>
 </html>
